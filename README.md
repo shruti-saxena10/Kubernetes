@@ -20,5 +20,6 @@ Corporate specifications
 Worker node->32GB of RAM 150GB of storage
 
 CLUSTER ARCHITECTURE
-<img width="810" alt="Screenshot 2024-05-30 at 4 18 33 PM" src="https://github.com/shruti-saxena10/Kubernetes/assets/108339410/f06fd329-a8e0-4ffe-aad8-6f5cd57526ba">
+
+<img width="810" alt="Screenshot 2024-05-30 at 4 18 33 PM" src="https://github.com/shruti-saxena10/Kubernetes/assets/108339410/e1a66234-7d91-4236-a42b-6a9cc5855fec">
 
