@@ -54,6 +54,12 @@ Worker Node-1(Date Plane)
 2.Containerruntime-->Manages the containers
 
 3.Kube-Proxy-->Responsible for Networking inside our cluster
+Worker Node-2Date Plane)
+1.Kublet
+
+2.Containerruntime
+
+3.Kube-Proxy
 
 
 Basic Architecture of application with components
@@ -69,7 +75,5 @@ PVC
 PV
 
 
-Worker Node-2
-Kublet
 Containerruntime
 Kube-Proxy
