@@ -27,8 +27,11 @@ CLUSTER ARCHITECTURE
 
 
 
+Cluster Architecture
+
 Master Node(Control Plane)
-1.API Server->Cluster gateway->Requests(Deploy-Upgrade-Scale up the pod) goes to it.
+1.Kube API Server->Cluster gateway->Requests(Deploy-Upgrade-Scale up the pod) goes to it.
+
 
 2.ETCD->called as cluster brain->stores the information about cluster configration, whichever pod is being created and which application is being deployed and stores in the form of key-value pairs .
 key :  Value
@@ -38,3 +41,20 @@ name: Shruti
 eg :-The pod requires 30-40GB of RAM
 and scheduller will see if which worker node has that much RAM and is available.Pod will assigned to that and pod will be created on that worker node.
 
+
+4.CONTROLLER Manager->Detect the state changes in pod.
+eg:-We have deployed our application and pod is running.For some reason, the pod got destroyed,removed or stopped or scaled down.those changes are detected by the controller manager and it will inform scheduller that it should be up.
+
+5.Cloud-controller manager
+A Kubernetes control plane component that embeds cloud-specific control logic. The cloud controller manager lets you link your cluster into your cloud provider's API, and separates out the components that interact with that cloud platform from components that only interact with your cluster.
+
+Worker Node-1(Date Plane)
+Kublet-->Responsible for Creation of pod or resources with respect to applications
+
+Containerruntime-->Manages the containers
+Kube-Proxy-->Responsible for Networking inside our cluster
+
+Worker Node-2
+Kublet
+Containerruntime
+Kube-Proxy
