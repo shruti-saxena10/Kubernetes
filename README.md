@@ -49,10 +49,11 @@ eg:-We have deployed our application and pod is running.For some reason, the pod
 A Kubernetes control plane component that embeds cloud-specific control logic. The cloud controller manager lets you link your cluster into your cloud provider's API, and separates out the components that interact with that cloud platform from components that only interact with your cluster.
 
 Worker Node-1(Date Plane)
-Kublet-->Responsible for Creation of pod or resources with respect to applications
+1.Kublet-->Responsible for Creation of pod or resources with respect to applications
 
-Containerruntime-->Manages the containers
-Kube-Proxy-->Responsible for Networking inside our cluster
+2.Containerruntime-->Manages the containers
+
+3.Kube-Proxy-->Responsible for Networking inside our cluster
 
 Worker Node-2
 Kublet
