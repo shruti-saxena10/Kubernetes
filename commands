@@ -1,0 +1,56 @@
+Commands in kubernetes
+First please ensure your Docker service is running. Then Delete the existing cluster and create a new one
+
+minikube delete
+minikube start --driver=docker
+
+kubectl get nodes
+minikube status
+kubectl get pod
+kubectl get services
+kubectl create -h
+Pods is the smallest unit,but we are not creating pods.We are creating abstraction over pods i.e. Deployment
+Usage:
+kubectl create deployment NAME --image=image [--dry-run] [options]
+eg:-
+kubectl create deployment nginx-depl --image=nginx
+kubectl get deployment
+kubectl get pod
+
+Between the deployment-abstraction layer and pod, there another layer managed automatically by kubernetes deployment called replicaset
+kubectl get replicaset
+Replicaset is managing the replicas of a Pod
+
+
+Layers of Abstraction
+Deployment manages a replicaset
+Replicaset manages replicas of that pod
+Pod is an abstraction of a container
+
+kubectl edit deployment nginx-depl
+kubectl logs [pod name]
+kubectl describe pod [pod name]
+kubectl exec -it [pod name] -- bin/bash
+kubectl apply -f [Filename eg]
+kubectl apply -f nginx-deployment.yaml
+
+"nginx-deployment.yaml" 0L, 0B                                0,0-1         All
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec: #--> For the deployment
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 1 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec: #-->for the pods
+      containers:
+      - name: nginx #-->one container
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
