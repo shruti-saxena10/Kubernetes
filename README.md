@@ -66,7 +66,7 @@ Basic Architecture of application with components
 <img width="1194" alt="Screenshot 2024-05-31 at 11 45 33 AM" src="https://github.com/shruti-saxena10/Kubernetes/assets/108339410/484fc3ba-b246-4e40-b797-e20d20a1a997">
 
 
-Components
+Components \n
 Pod 
 Service
 Scerets
