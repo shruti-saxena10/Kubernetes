@@ -54,3 +54,25 @@ spec: #--> For the deployment
         image: nginx:1.14.2
         ports:
         - containerPort: 80
+
+nginx-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+
+
+kubectl get service
+kubectl describe service nginx-service
+kubectl get pod -o wide
+kubectl apply -f nginx-service.yaml
+kubectl get deployment nginx-deployment -o yaml
+kubectl get deployment nginx-deployment -o yaml
+kubectl get deployment nginx-deployment -o yaml >nginx-deployment-result.yaml
