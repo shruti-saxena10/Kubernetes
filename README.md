@@ -81,7 +81,8 @@ PVC
 PV
 
 
-![Uploading Screenshot 2024-06-03 at 10.56.29 AM.png…]()
+<img width="1448" alt="Screenshot 2024-06-03 at 10 56 29 AM" src="https://github.com/shruti-saxena10/Kubernetes/assets/108339410/12a72100-d5c9-4d0f-adba-dc6df6b4f021">
+
 
 
 
