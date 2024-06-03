@@ -81,5 +81,9 @@ PVC
 PV
 
 
-Containerruntime
-Kube-Proxy
+![Uploading Screenshot 2024-06-03 at 10.56.29 AM.png…]()
+
+
+
+
+
